@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 public class HelloController {
-    private static final Logger log = AccessingDataJpaApplication.log;
+    public static final Logger log = LoggerFactory.getLogger(HelloController.class);
     private static final String htmlBr = "<br />";
 
     @Autowired
