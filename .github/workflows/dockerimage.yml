@@ -10,7 +10,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build with gradle
-      run: gradle build
     - name: Build the Docker image
-      run: ./docker.build.sh
+      run: docker build . --file Dockerfile --tag bytefiddler/hello-kubernetes:$(date +%s)
