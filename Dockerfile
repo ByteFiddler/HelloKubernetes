@@ -20,4 +20,5 @@ USER spring:spring
 COPY --from=builder $DIR/${DEPENDENCY}/BOOT-INF/lib $DIR/lib
 COPY --from=builder $DIR/${DEPENDENCY}/META-INF $DIR/META-INF
 COPY --from=builder $DIR/${DEPENDENCY}/BOOT-INF/classes $DIR
+COPY run_tests.sh /
 ENTRYPOINT ["java","-cp","app:app/lib/*","com.bytefiddler.demo.DemoApplication"]
