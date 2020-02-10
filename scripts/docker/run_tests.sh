@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sleep 10
+
 echo 'START: run_tests.sh'
 
 CURL_OUT="$(curl -s localhost:8080)" || exit $?
