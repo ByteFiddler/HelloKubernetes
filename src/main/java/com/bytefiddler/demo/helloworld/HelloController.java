@@ -6,9 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class HelloController {
 
-    @RequestMapping("/")
+    public static final String REQUEST_MAPPING = "/";
+    public static final String HELLO_WORLD = "Hello, World";
+
+    @RequestMapping(REQUEST_MAPPING)
     public String index() {
-        return "Greetings from Spring Boot!";
+        return HELLO_WORLD;
     }
 
 }
