@@ -27,5 +27,5 @@ COPY --from=builder $DIR/${DEPENDENCY}/BOOT-INF/lib $DIR/lib
 COPY --from=builder $DIR/${DEPENDENCY}/META-INF $DIR/META-INF
 COPY --from=builder $DIR/${DEPENDENCY}/BOOT-INF/classes $DIR
 # add test script
-COPY run_tests.sh /
+COPY scripts/docker/run_tests.sh /
 ENTRYPOINT ["java","-cp","app:app/lib/*","com.bytefiddler.demo.DemoApplication"]
