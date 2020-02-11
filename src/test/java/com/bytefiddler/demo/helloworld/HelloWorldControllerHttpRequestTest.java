@@ -9,7 +9,7 @@ import org.springframework.boot.web.server.LocalServerPort;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class HelloControllerHttpRequestTest {
+public class HelloWorldControllerHttpRequestTest {
 
     @LocalServerPort
     private int port;
@@ -19,7 +19,7 @@ public class HelloControllerHttpRequestTest {
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        assertThat(this.restTemplate.getForObject("http://localhost:" + port + HelloController.REQUEST_MAPPING,
-                String.class)).contains(HelloController.HELLO_WORLD);
+        assertThat(this.restTemplate.getForObject("http://localhost:" + port + HelloWorldController.REQUEST_MAPPING,
+                String.class)).contains(HelloWorldController.HELLO_WORLD);
     }
 }

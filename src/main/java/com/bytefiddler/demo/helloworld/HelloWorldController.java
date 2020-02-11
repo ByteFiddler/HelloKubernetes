@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class HelloController {
+public class HelloWorldController {
 
     public static final String REQUEST_MAPPING = "/";
     public static final String HELLO_WORLD = "Hello, World";

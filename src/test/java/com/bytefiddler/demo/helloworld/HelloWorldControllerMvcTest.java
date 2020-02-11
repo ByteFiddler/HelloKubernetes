@@ -14,14 +14,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HelloControllerMvcTest {
+public class HelloWorldControllerMvcTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get(HelloController.REQUEST_MAPPING)).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString(HelloController.HELLO_WORLD)));
+        this.mockMvc.perform(get(HelloWorldController.REQUEST_MAPPING)).andDo(print()).andExpect(status().isOk())
+                .andExpect(content().string(containsString(HelloWorldController.HELLO_WORLD)));
     }
 }
