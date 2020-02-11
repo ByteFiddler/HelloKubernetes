@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class DemoController {
-    public static final Logger log = LoggerFactory.getLogger(DemoController.class);
+public class AccessingDataJpaController {
+    public static final Logger log = LoggerFactory.getLogger(AccessingDataJpaController.class);
     private static final String htmlBr = "<br />";
 
     @Autowired
